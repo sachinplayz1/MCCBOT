@@ -1,0 +1,11 @@
+# Use the official Mono runtime image
+FROM mono:latest
+
+# Set working directory inside the container
+WORKDIR /app
+
+# Copy all your MCC files into the container
+COPY . .
+
+# Run MCC when the container starts
+CMD ["mono", "MinecraftClient.exe"]
